@@ -55,6 +55,7 @@ public class InstituteFacultyPageObjects extends TestBase  {
 				createFacultyButton.click();
 				
 				facultyUsername.sendKeys(testData.get(CommonConstants.INSTITUTE_FACULTY_USER_NAME).toString());
+				
 				commonMethods.selectDropdownOption(facultySubject, testData.get(CommonConstants.INSTITUTE_FACULTY_SUBJECT.toString()));
 				
 				facultyeEmail.sendKeys(testData.get(CommonConstants.INSTITUTE_FACULTY_EMAIL.toString()));
@@ -64,7 +65,9 @@ public class InstituteFacultyPageObjects extends TestBase  {
 				facultyOccupation.sendKeys(testData.get(CommonConstants.INSTITUTE_FACULTY_OCCUPATION.toString()));
 				facultyPassword.sendKeys(testData.get(CommonConstants.ONBOARD_INSTITUTE_PASSWORD.toString()));
 				facultyConfirmPassword.sendKeys(testData.get(CommonConstants.INSTITUTE_FACULTY_CONFIRM_PASSWORD).toString());
+				
 				facultyCreateButton.click();
+				
 				return driver.getTitle();
 				
 			}
