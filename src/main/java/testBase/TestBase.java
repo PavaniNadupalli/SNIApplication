@@ -11,8 +11,11 @@ import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.AllCredLoginPageObjects;
+import pageObjects.InstituteDashBoardObjects;
+import pageObjects.InstituteFacultyPageObjects;
+import pageObjects.InstituteOnboardingRegistrationObjects;
 import pageObjects.LoginPageObjects;
-import pageObjects.SelectPriceOptionsPageObjects;
+//import pageObjects.SelectPriceOptionsPageObjects;
 //import pageObjects.EnterInsurantDataPageObjects;
 //import pageObjects.EnterProductDataPageObjects;
 //import pageObjects.EnterVehicalDataPageObjects;
@@ -52,8 +55,11 @@ public class TestBase extends ObjectsRepo{
 	@BeforeMethod   /// it will get execute before each test method within current class
 	public void setupMethod() throws Exception {
 		LaunchBrowserAndNavigate();
-	homepage = new LoginPageObjects();
+	loginPage = new LoginPageObjects();
 	allCredLogPage = new AllCredLoginPageObjects();
+	OnboardingInstituionRegistration = new InstituteOnboardingRegistrationObjects();
+	instituteDashBoard = new InstituteDashBoardObjects();
+	instituteFacultyCreation = new InstituteFacultyPageObjects();
 	}
 	
 	@AfterMethod

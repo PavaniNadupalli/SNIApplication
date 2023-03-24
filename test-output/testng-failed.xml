@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AdminModuleTestCase.AllCredLoginPage_Test">
+      <class name="AdminModuleTestCase.InstituteFacultyPage_Test">
         <methods>
-          <include name="insuranceCalculate" invocation-numbers="2"/>
           <include name="setupMethod"/>
+          <include name="FacultyCreationByInstitute" invocation-numbers="0"/>
           <include name="cleanUp"/>
         </methods>
-      </class> <!-- AdminModuleTestCase.AllCredLoginPage_Test -->
+      </class> <!-- AdminModuleTestCase.InstituteFacultyPage_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

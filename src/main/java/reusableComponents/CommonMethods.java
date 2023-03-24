@@ -1,8 +1,14 @@
 package reusableComponents;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -43,6 +49,7 @@ public class CommonMethods {
 	}
 	
 	
+	
 	//get dropdown options as list of string for compare
 	public List<String> getDropDownOptionsAsList(WebElement element) {
 		Select os = new Select(element);
@@ -54,5 +61,35 @@ public class CommonMethods {
 		}
 		return actualContents;
 	}
+	// Common Method to Upload a file using Robot Class
+		public void selectFileUpLoad(WebElement element, String filePath, WebDriver driver) throws Exception {
+			try {
+				// file path passed as parameter to StringSelection
+				System.out.println(filePath);
+				StringSelection s = new StringSelection(filePath);
+				// Clipboard copy
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
 
+				// identify element and click
+				JavascriptExecutor j = (JavascriptExecutor) driver;
+				j.executeScript("arguments[0].click();", element);
+
+				// Robot object creation
+				Robot r = new Robot();
+
+				r.delay(250);
+				r.keyPress(KeyEvent.VK_ENTER);
+				r.keyRelease(KeyEvent.VK_ENTER);
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_V);
+				r.keyRelease(KeyEvent.VK_V);
+				r.keyRelease(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_ENTER);
+				r.delay(150);
+				r.keyRelease(KeyEvent.VK_ENTER);
+
+			} catch (Exception e) {
+				throw new Exception("File Path not found " + filePath);
+			}
+		}
 }
