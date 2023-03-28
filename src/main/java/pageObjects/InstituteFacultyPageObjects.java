@@ -76,8 +76,7 @@ public class InstituteFacultyPageObjects extends TestBase  {
 				
 				Thread.sleep(2000);
 				
-				WebElement logout = driver.findElement(By.partialLinkText("Log-Out"));
-				logout.click();
+			
 				return driver.getTitle();
 				
 			}

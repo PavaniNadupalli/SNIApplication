@@ -32,6 +32,9 @@ public class LoginPageObjects extends TestBase {
 	@FindBy (partialLinkText = "Insti")
 	WebElement institutionslink;
 	
+	@FindBy (xpath = "//p[text()='Log-Out']")
+	WebElement logout;
+	
 
 
 	
@@ -58,6 +61,7 @@ public class LoginPageObjects extends TestBase {
 	
 	// clicking on sign in
 		public void clickOnSignIn() throws InterruptedException {
+			System.out.println(driver);
 			sign_in.click();
 		}	
 	// navigating to home page and click on on boarding in menu
@@ -72,5 +76,10 @@ public class LoginPageObjects extends TestBase {
 		this.homepage();
 		this.OnboardingButton();
 		institutionslink.click();
+	}
+	
+	public void logoutButton() {
+		System.out.println(driver);
+		logout.click();
 	}
 }

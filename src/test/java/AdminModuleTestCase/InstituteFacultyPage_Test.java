@@ -26,6 +26,7 @@ public class InstituteFacultyPage_Test extends TestBase {
 	@Test(dataProvider = "InstituteLogin")
 	public void login(Object obj1) throws Exception {
 		HashMap<String, String> testData = (HashMap<String, String>) obj1;
+		System.out.println("Padmini ");
 		System.out.println(testData);
 		loginPage.clickOnSignIn();
 		allCredLogPage.allCredLogin(testData);
@@ -39,6 +40,7 @@ public class InstituteFacultyPage_Test extends TestBase {
 	
 	@DataProvider(name = "InstituteLogin")
 	public Object[][] testDataSupplier() throws Exception {
+		
 		Object[][] obj = new Object[excelInstiuteSheet.getRowCount()][1];
 		for (int i = 1; i <= excelInstiuteSheet.getRowCount(); i++) {
 			HashMap<String, String> testData1 = excelInstiuteSheet.getTestDataInMap(i);

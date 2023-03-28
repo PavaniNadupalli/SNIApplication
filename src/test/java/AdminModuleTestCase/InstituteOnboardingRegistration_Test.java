@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 public class InstituteOnboardingRegistration_Test  extends TestBase{
 	String fileName = "//src//test//resources//testData//RegistrationAsInstituteThroughOnborading.xlsx";
 	
-	ExcelOperations excel = new ExcelOperations(fileName,"RegistrationData");
+	ExcelOperations excel = new ExcelOperations(fileName,"RegistrationforInsitute");
 	
 	@Test (dataProvider = "RegisterInstitute")
 	public void RegisterInstitute(Object obj1) throws Exception {
@@ -34,10 +34,8 @@ public class InstituteOnboardingRegistration_Test  extends TestBase{
 	
 		loginPage.InstitutionsSelect();  
 		OnboardingInstituionRegistration.RegistrationOfInstitute(testData);
-		String title = allCredLogPage.allCredLogin(testData);
-		System.out.println("The Title is:" + title);
-		WebElement logout = driver.findElement(By.partialLinkText("Log-Out"));
-		logout.click();
+		driver.close();
+		
 		
 		
 

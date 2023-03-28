@@ -5,9 +5,13 @@
     <classes>
      
      
-      <class name = "AdminModuleTestCase.InstituteOnboardingRegistration_Test"/>
+      <class name = "AdminModuleTestCase.InstituteOnboardingRegistration_Test"/> 
      
      <class name="AdminModuleTestCase.AllCredLoginPage_Test">
+     <methods>
+     <exclude name="login"></exclude>
+     <include name="loginInstituteAfterOnboardRegistration"></include>
+     </methods>
      
     
      </class>

@@ -62,34 +62,36 @@ public class CommonMethods {
 		return actualContents;
 	}
 	// Common Method to Upload a file using Robot Class
-		public void selectFileUpLoad(WebElement element, String filePath, WebDriver driver) throws Exception {
-			try {
-				// file path passed as parameter to StringSelection
-				System.out.println(filePath);
-				StringSelection s = new StringSelection(filePath);
-				// Clipboard copy
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
+	public void selectFileUpLoad(WebElement element, String filePath, WebDriver driver) throws Exception {
+		try {
+			// file path passed as parameter to StringSelection
+			System.out.println(filePath);
+			StringSelection s = new StringSelection(filePath);
+			// Clipboard copy
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
 
-				// identify element and click
-				JavascriptExecutor j = (JavascriptExecutor) driver;
-				j.executeScript("arguments[0].click();", element);
+			// identify element and click
+			JavascriptExecutor j = (JavascriptExecutor) driver;
+			j.executeScript("arguments[0].click();", element);
 
-				// Robot object creation
-				Robot r = new Robot();
+			// Robot object creation
+			Robot r = new Robot();
 
-				r.delay(250);
-				r.keyPress(KeyEvent.VK_ENTER);
-				r.keyRelease(KeyEvent.VK_ENTER);
-				r.keyPress(KeyEvent.VK_CONTROL);
-				r.keyPress(KeyEvent.VK_V);
-				r.keyRelease(KeyEvent.VK_V);
-				r.keyRelease(KeyEvent.VK_CONTROL);
-				r.keyPress(KeyEvent.VK_ENTER);
-				r.delay(150);
-				r.keyRelease(KeyEvent.VK_ENTER);
+			r.delay(250);
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+			r.keyPress(KeyEvent.VK_CONTROL);
+			r.keyPress(KeyEvent.VK_V);
+			r.keyRelease(KeyEvent.VK_V);
+			r.keyRelease(KeyEvent.VK_CONTROL);
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.delay(150);
+			r.keyRelease(KeyEvent.VK_ENTER);
 
-			} catch (Exception e) {
-				throw new Exception("File Path not found " + filePath);
-			}
+		} catch (Exception e) {
+			throw new Exception("File Path not found " + filePath);
 		}
+	}
+
+			
 }

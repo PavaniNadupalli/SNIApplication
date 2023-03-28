@@ -73,10 +73,10 @@ public class InstituteOnboardingRegistrationObjects extends TestBase {
 					// RegistrationPage of institute data
 					institutePassword.sendKeys(testData.get(CommonConstants.ONBOARD_INSTITUTE_PASSWORD).toString());
 					instituteConfirmPassword.sendKeys(testData.get(CommonConstants.ONBOARD_INSTITUTE_CONFIRM_PASSWORD).toString());
-					
+					System.out.println("Anuhya========");
 					    // using robot class in common methods for file upload
 					    commonMethods.selectFileUpLoad(institutePhoto, testData.get(CommonConstants.ONBOARD_INSTITUTE_FILE_UPLOAD).toString(), driver);
-					    
+						System.out.println("Anuhya+++++++++++++++++++");
 					   Thread.sleep(5000);
 					   
 					    // using java script executor for clicking on register button
