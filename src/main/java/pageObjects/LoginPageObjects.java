@@ -50,11 +50,16 @@ public class LoginPageObjects extends TestBase {
 	    
 	}
 	//navigating to home page and click on sign in button
-	public void clickOnSignIn() throws InterruptedException{
+	public void naviagte_clickOnSignIn() throws InterruptedException{
 		System.out.println(driver);
 		this.homepage();
 		sign_in.click();
 	}
+	
+	// clicking on sign in
+		public void clickOnSignIn() throws InterruptedException {
+			sign_in.click();
+		}	
 	// navigating to home page and click on on boarding in menu
 	public void OnboardingButton()  throws InterruptedException
 	{

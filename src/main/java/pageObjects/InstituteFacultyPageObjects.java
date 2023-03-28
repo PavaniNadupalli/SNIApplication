@@ -2,6 +2,7 @@ package pageObjects;
 
 import java.util.HashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,6 +47,9 @@ public class InstituteFacultyPageObjects extends TestBase  {
 	@FindBy(id = "CreateNewFaculty")
 	WebElement facultyCreateButton;
 	
+	@FindBy(xpath = "//button[text()='OK']")
+	WebElement okButton;
+	
 	public InstituteFacultyPageObjects() {
 		PageFactory.initElements(driver, this);
 	}
@@ -67,7 +71,13 @@ public class InstituteFacultyPageObjects extends TestBase  {
 				facultyConfirmPassword.sendKeys(testData.get(CommonConstants.INSTITUTE_FACULTY_CONFIRM_PASSWORD).toString());
 				
 				facultyCreateButton.click();
+				Thread.sleep(3000);
+				okButton.click();
 				
+				Thread.sleep(2000);
+				
+				WebElement logout = driver.findElement(By.partialLinkText("Log-Out"));
+				logout.click();
 				return driver.getTitle();
 				
 			}

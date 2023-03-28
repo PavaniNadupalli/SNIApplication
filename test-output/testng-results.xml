@@ -1,32 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-24T20:27:38 IST" name="Default suite" finished-at="2023-03-24T20:27:55 IST" duration-ms="16570">
+  <suite started-at="2023-03-28T08:20:15 IST" name="Default suite" finished-at="2023-03-28T08:20:15 IST" duration-ms="38">
     <groups>
     </groups>
-    <test started-at="2023-03-24T20:27:38 IST" name="Default test" finished-at="2023-03-24T20:27:55 IST" duration-ms="16570">
-      <class name="AdminModuleTestCase.InstituteFacultyPage_Test">
-        <test-method is-config="true" signature="setupMethod()[pri:0, instance:AdminModuleTestCase.InstituteFacultyPage_Test@40f1be1b]" started-at="2023-03-24T20:27:38 IST" name="setupMethod" finished-at="2023-03-24T20:27:44 IST" duration-ms="5987" status="PASS">
+    <test started-at="2023-03-28T08:20:15 IST" name="Default test" finished-at="2023-03-28T08:20:15 IST" duration-ms="38">
+      <class name="AdminModuleTestCase.AllCredLoginPage_Test">
+        <test-method signature="loginInstituteAfterOnboardRegistration(java.lang.Object)[pri:0, instance:AdminModuleTestCase.AllCredLoginPage_Test@6b9ce1bf]" started-at="2023-03-28T08:20:15 IST" name="loginInstituteAfterOnboardRegistration" data-provider="institute" finished-at="2023-03-28T08:20:15 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.setCellType(org.apache.poi.ss.usermodel.CellType)" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.setCellType(org.apache.poi.ss.usermodel.CellType)" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:51)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:801)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.setCellType(org.apache.poi.ss.usermodel.CellType)" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null
+at reusableComponents.ExcelOperations.getTestDataInMap(ExcelOperations.java:44)
+at AdminModuleTestCase.AllCredLoginPage_Test.testDataSupplier1(AllCredLoginPage_Test.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:78)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:47)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method signature="login(java.lang.Object)[pri:0, instance:AdminModuleTestCase.InstituteFacultyPage_Test@40f1be1b]" started-at="2023-03-24T20:27:44 IST" name="login" data-provider="InstituteLogin" finished-at="2023-03-24T20:27:55 IST" duration-ms="10543" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=testFaculty@gmail.com, Address=bangalore, TC No=1, ConfirmPassword=password, Role=Institute, Occupation=occupation, password=welcome, Username=faculty123, Biography=biography, PhoneNumber=8956895689, ChooseSubject=Biology, username=sampleTestInstitute@gmail.com, Password=password}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:AdminModuleTestCase.InstituteFacultyPage_Test@40f1be1b]" started-at="2023-03-24T20:27:55 IST" name="cleanUp" finished-at="2023-03-24T20:27:55 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-      </class> <!-- AdminModuleTestCase.InstituteFacultyPage_Test -->
+        </test-method> <!-- loginInstituteAfterOnboardRegistration -->
+      </class> <!-- AdminModuleTestCase.AllCredLoginPage_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

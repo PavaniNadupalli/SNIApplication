@@ -34,7 +34,10 @@ public class InstituteOnboardingRegistration_Test  extends TestBase{
 	
 		loginPage.InstitutionsSelect();  
 		OnboardingInstituionRegistration.RegistrationOfInstitute(testData);
-		
+		String title = allCredLogPage.allCredLogin(testData);
+		System.out.println("The Title is:" + title);
+		WebElement logout = driver.findElement(By.partialLinkText("Log-Out"));
+		logout.click();
 		
 		
 

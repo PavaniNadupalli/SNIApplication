@@ -25,12 +25,12 @@ public class AllCredLoginPageObjects extends TestBase {
 	
 
 
-	//constructor - to use initElement method
+		//constructor - to use initElement method
 		public AllCredLoginPageObjects() {
 			PageFactory.initElements(driver, this);
 		}
 		
-		//for click on motorcycle link on homepage
+		
 		public String allCredLogin(HashMap<String, String> testData) throws Exception {
 			System.out.println(driver);
 			//LoginAs.click();
@@ -39,6 +39,18 @@ public class AllCredLoginPageObjects extends TestBase {
 			password.sendKeys(testData.get(CommonConstants.PASSWORD).toString());
 			Login.click();
 			return driver.getTitle();
+		}
+		
+		public String LoginAsFacultyCreatedByInstitute (HashMap<String, String> testData) throws Exception {
+			System.out.println(driver);
+			//LoginAs.click();
+			commonMethods.selectDropdownOption(LoginAs, testData.get(CommonConstants.ROLE_FACULTY).toString());
+			username.sendKeys(testData.get(CommonConstants.USERNAME_FACULTY).toString());
+			password.sendKeys(testData.get(CommonConstants.PASSWORD_FACULTY).toString());
+			Login.click();
+			return driver.getTitle();
+			
+			
 		}
 	
 	

@@ -12,6 +12,11 @@ public class CommonConstants {
 		public static final String TYPE = "type";
 		public static final String TC_NO ="TC No";
 		
+		
+		// faculty login credentials which institute created
+		public static final String ROLE_FACULTY = "roleFaculty";
+		public static final String USERNAME_FACULTY = "usernameFaculty";
+		public static final String PASSWORD_FACULTY = "passwordFaculty";
 		/*AllCredsLogins_TestData.xlsx
 		 * -- Data from a column
 		 */

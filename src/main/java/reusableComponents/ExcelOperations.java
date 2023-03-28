@@ -44,6 +44,7 @@ public class ExcelOperations {
 			sh.getRow(rowNum).getCell(i).setCellType(CellType.STRING);
 			//System.out.println(sh.getRow(0).getCell(i).toString());
 			hm.put(sh.getRow(0).getCell(i).toString(), sh.getRow(rowNum).getCell(i).toString());
+			System.out.println(hm);
 		}	
 		return hm;
 	}
