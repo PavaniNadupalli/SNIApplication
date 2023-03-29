@@ -12,8 +12,7 @@ public class PropertiesOperations {
 	static Properties prop = new Properties();
 	
 	public static String getPropertyValueByKey(String key) throws Exception {
-		//1. load data from properties file
-		//if(login==Admin) {
+		
 		String propFilePath = System.getProperty("user.dir")+"/src/test/resources/config.properties";
 		FileInputStream fis = new FileInputStream(propFilePath);
 		prop.load(fis);

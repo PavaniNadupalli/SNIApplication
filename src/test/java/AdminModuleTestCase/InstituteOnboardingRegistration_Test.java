@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pageObjects.InstituteOnboardingRegistrationObjects;
-import pageObjects.LoginPageObjects;
+import pageObjects.HomePageObjects;
 import reusableComponents.ExcelOperations;
 import reusableComponents.PropertiesOperations;
 import testBase.TestBase;
@@ -32,7 +32,7 @@ public class InstituteOnboardingRegistration_Test  extends TestBase{
 		HashMap<String, String> testData = (HashMap<String, String>) obj1;
 		System.out.println(testData);
 	
-		loginPage.InstitutionsSelect();  
+		homePage.InstitutionsSelect();  
 		OnboardingInstituionRegistration.RegistrationOfInstitute(testData);
 		driver.close();
 		

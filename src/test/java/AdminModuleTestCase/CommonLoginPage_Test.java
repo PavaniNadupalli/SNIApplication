@@ -12,7 +12,7 @@ import reusableComponents.ExcelOperations;
 import testBase.ObjectsRepo;
 import testBase.TestBase;
 
-public class AllCredLoginPage_Test extends TestBase {
+public class CommonLoginPage_Test extends TestBase {
 
 	String fileName = "//src//test//resources//testData//AllCredsLogins_TestData.xlsx";
 
@@ -23,13 +23,14 @@ public class AllCredLoginPage_Test extends TestBase {
 	@Test(dataProvider = "allLogin")
 	public void login(Object obj1) throws Exception {
 		HashMap<String, String> testData = (HashMap<String, String>) obj1;
-System.out.println("In login method");
-		loginPage.naviagte_clickOnSignIn();
+		System.out.println("In login method");
+		homePage.naviagte_clickOnSignIn();
 		System.out.println("after click on sign in");
-		String title = allCredLogPage.allCredLogin(testData);
+		String title = commonLoginPage.commonLogin(testData);
 		System.out.println("The Title is:" + title);
 		WebElement logout = driver.findElement(By.partialLinkText("Log-Out"));
 		logout.click();
+		driver.close();
 
 	}
 
@@ -39,30 +40,24 @@ System.out.println("In login method");
 		HashMap<String, String> testData = (HashMap<String, String>) obj1;
 		System.out.println(testData);
 
-		loginPage.naviagte_clickOnSignIn();
+		homePage.naviagte_clickOnSignIn();
 
-		allCredLogPage.allCredLogin(testData);
-
-		instituteDashBoard.ClickOnFaculty();
+		commonLoginPage.commonLogin(testData);
 
 		String title1 = instituteFacultyCreation.InstituteFacultyCreation(testData);
 		System.out.println("The Ttitle is " + title1);
 		Thread.sleep(3000);
-System.out.println("before logout");
-		loginPage.logoutButton();
+		System.out.println("before logout");
+		homePage.logoutButton();
 		System.out.println("after logout");
 		
 		Thread.sleep(3000);
 	
-		loginPage.clickOnSignIn();
+		homePage.clickOnSignIn();
 		
-		
-		
-		
-
-		allCredLogPage.LoginAsFacultyCreatedByInstitute(testData);
+		commonLoginPage.LoginAsFacultyCreatedByInstitute(testData);
 		Thread.sleep(2000);
-		loginPage.logoutButton();
+		homePage.logoutButton();
 		driver.close();
 		
 

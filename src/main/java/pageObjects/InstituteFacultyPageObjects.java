@@ -12,6 +12,9 @@ import testBase.TestBase;
 
 public class InstituteFacultyPageObjects extends TestBase  {
 	
+	@FindBy (xpath = "//p[contains(text(),'Faculty')]")
+	WebElement FacultyLink;
+	
 	@FindBy (id = "UploadNewFaculty")
 	WebElement createFacultyButton;
 	
@@ -55,6 +58,8 @@ public class InstituteFacultyPageObjects extends TestBase  {
 	}
 	
 			public String InstituteFacultyCreation (HashMap<String, String> testData) throws Exception {
+				
+				FacultyLink.click();
 				
 				createFacultyButton.click();
 				

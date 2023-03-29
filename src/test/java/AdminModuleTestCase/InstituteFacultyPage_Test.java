@@ -28,11 +28,11 @@ public class InstituteFacultyPage_Test extends TestBase {
 		HashMap<String, String> testData = (HashMap<String, String>) obj1;
 		System.out.println("Padmini ");
 		System.out.println(testData);
-		loginPage.clickOnSignIn();
-		allCredLogPage.allCredLogin(testData);
-		instituteDashBoard.ClickOnFaculty();
+		homePage.clickOnSignIn();
+		commonLoginPage.commonLogin(testData);
+	
 		instituteFacultyCreation.InstituteFacultyCreation(testData);
-		
+		driver.close();
 		
 	}
 	

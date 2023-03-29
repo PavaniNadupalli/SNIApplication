@@ -7,7 +7,7 @@
      
       <class name = "AdminModuleTestCase.InstituteOnboardingRegistration_Test"/> 
      
-     <class name="AdminModuleTestCase.AllCredLoginPage_Test">
+     <class name="AdminModuleTestCase.CommonLoginPage_Test">
      <methods>
      <exclude name="login"></exclude>
      <include name="loginInstituteAfterOnboardRegistration"></include>

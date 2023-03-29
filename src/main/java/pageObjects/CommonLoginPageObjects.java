@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import reusableComponents.CommonConstants;
 import testBase.TestBase;
 
-public class AllCredLoginPageObjects extends TestBase {
+public class CommonLoginPageObjects extends TestBase {
 	
 	@FindBy(name = "LoginAs")
 	WebElement LoginAs;
@@ -26,12 +26,12 @@ public class AllCredLoginPageObjects extends TestBase {
 
 
 		//constructor - to use initElement method
-		public AllCredLoginPageObjects() {
+		public CommonLoginPageObjects() {
 			PageFactory.initElements(driver, this);
 		}
 		
 		
-		public String allCredLogin(HashMap<String, String> testData) throws Exception {
+		public String commonLogin(HashMap<String, String> testData) throws Exception {
 			System.out.println(driver);
 			//LoginAs.click();
 			commonMethods.selectDropdownOption(LoginAs, testData.get(CommonConstants.ROLE).toString());
