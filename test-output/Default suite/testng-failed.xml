@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AdminModuleTestCase.InstituteOnboardingRegistration_Test">
+      <class name="testPages.LoginPage_Tests">
         <methods>
           <include name="setupMethod"/>
-          <include name="RegisterInstitute" invocation-numbers="0"/>
+          <include name="login"/>
           <include name="cleanUp"/>
         </methods>
-      </class> <!-- AdminModuleTestCase.InstituteOnboardingRegistration_Test -->
+      </class> <!-- testPages.LoginPage_Tests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

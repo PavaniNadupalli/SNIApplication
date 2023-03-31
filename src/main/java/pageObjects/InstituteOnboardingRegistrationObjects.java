@@ -57,7 +57,7 @@ public class InstituteOnboardingRegistrationObjects extends TestBase {
 			}
 			
 			
-			   public String RegistrationOfInstitute(HashMap<String, String> testData) throws Exception {
+			   public String onboardingInstituteRegistration(HashMap<String, String> testData) throws Exception {
 				   
 				//RegistrationPage of institute Data		    
 				   instituteFullName.sendKeys(testData.get(CommonConstants.ONBOARD_INSTITUTE_FULL_NAME).toString());

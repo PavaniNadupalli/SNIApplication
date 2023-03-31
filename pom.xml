@@ -94,11 +94,11 @@
     <artifactId>webdrivermanager</artifactId>
     <version>5.3.1</version>
 </dependency>
-
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 		<dependency>
-			<groupId>com.aventstack</groupId>
+			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>4.1.7</version>
+			<version>2.41.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -127,7 +127,12 @@
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.0.0</version>
 </dependency>
-
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
 
 	</dependencies>
 

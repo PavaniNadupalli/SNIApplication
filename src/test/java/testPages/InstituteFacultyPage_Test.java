@@ -1,4 +1,4 @@
-package AdminModuleTestCase;
+package testPages;
 
 import java.util.HashMap;
 
@@ -7,32 +7,19 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import reusableComponents.CommonConstants;
 import reusableComponents.ExcelOperations;
-import testBase.ObjectsRepo;
 import testBase.TestBase;
 
-public class CommonLoginPage_Test extends TestBase {
+public class InstituteFacultyPage_Test extends TestBase {
+	
+	
 
 	String fileName = "//src//test//resources//testData//AllCredsLogins_TestData.xlsx";
-
-	ExcelOperations excel = new ExcelOperations(fileName, "AllRoleLogins");
-
+	
 	ExcelOperations excelInstiuteSheet = new ExcelOperations(fileName, "InstituteOnboardFacultyDetails");
+	
 
-	@Test(dataProvider = "allLogin")
-	public void login(Object obj1) throws Exception {
-		HashMap<String, String> testData = (HashMap<String, String>) obj1;
-		System.out.println("In login method");
-		homePage.naviagte_clickOnSignIn();
-		System.out.println("after click on sign in");
-		String title = commonLoginPage.commonLogin(testData);
-		System.out.println("The Title is:" + title);
-		WebElement logout = driver.findElement(By.partialLinkText("Log-Out"));
-		logout.click();
-		driver.close();
-
-	}
+	
 
 	@Test(dataProvider = "institutefacultyflow")
 	public void loginInstituteAfterOnboardRegistration(Object obj1) throws Exception {
@@ -42,7 +29,7 @@ public class CommonLoginPage_Test extends TestBase {
 
 		homePage.naviagte_clickOnSignIn();
 
-		commonLoginPage.commonLogin(testData);
+		commonLoginPage.login(testData);
 
 		String title1 = instituteFacultyCreation.InstituteFacultyCreation(testData);
 		System.out.println("The Ttitle is " + title1);
@@ -58,23 +45,12 @@ public class CommonLoginPage_Test extends TestBase {
 		commonLoginPage.LoginAsFacultyCreatedByInstitute(testData);
 		Thread.sleep(2000);
 		homePage.logoutButton();
-		driver.close();
-		
+	
 
 	}
-
-	// Data provider method --> return object array
-
-	@DataProvider(name = "allLogin")
-	public Object[][] testDataSupplier() throws Exception {
-		Object[][] obj = new Object[excel.getRowCount()][1];
-		for (int i = 1; i <= excel.getRowCount(); i++) {
-			HashMap<String, String> testData = excel.getTestDataInMap(i);
-			obj[i - 1][0] = testData;
-		}
-		return obj;
-
-	}
+	
+	
+	
 
 	@DataProvider(name = "institutefacultyflow")
 	public Object[][] testDataSupplier1() throws Exception {
@@ -91,4 +67,12 @@ public class CommonLoginPage_Test extends TestBase {
 		return obj;
 	}
 
+	
+	
+	
+
+
+	
 }
+
+

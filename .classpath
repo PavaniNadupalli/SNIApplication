@@ -31,5 +31,14 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="src/test/resources/testData/RegistrationAsInstituteThroughOnborading.xlsx"/>
+	<classpathentry kind="lib" path="C:/Users/User/.m2/repository/com/aventstack/extentreports/4.1.7/extentreports-4.1.7.jar" sourcepath="C:/Users/User/.m2/repository/com/aventstack/extentreports/4.1.7/extentreports-4.1.7-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.aventstack"/>
+			<attribute name="maven.artifactId" value="extentreports"/>
+			<attribute name="maven.version" value="4.1.7"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

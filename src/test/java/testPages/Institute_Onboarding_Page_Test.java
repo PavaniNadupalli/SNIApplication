@@ -1,4 +1,4 @@
-package AdminModuleTestCase;
+package testPages;
 
 
 import java.util.HashMap;
@@ -21,8 +21,8 @@ import org.testng.annotations.Test;
 
 
 
-public class InstituteOnboardingRegistration_Test  extends TestBase{
-	String fileName = "//src//test//resources//testData//RegistrationAsInstituteThroughOnborading.xlsx";
+public class Institute_Onboarding_Page_Test  extends TestBase{
+String fileName = "//src//test//resources//testData//RegistrationAsInstituteThroughOnborading.xlsx";
 	
 	ExcelOperations excel = new ExcelOperations(fileName,"RegistrationforInsitute");
 	
@@ -33,8 +33,8 @@ public class InstituteOnboardingRegistration_Test  extends TestBase{
 		System.out.println(testData);
 	
 		homePage.InstitutionsSelect();  
-		OnboardingInstituionRegistration.RegistrationOfInstitute(testData);
-		driver.close();
+		OnboardingInstituionRegistration.onboardingInstituteRegistration(testData);
+		
 		
 		
 		
@@ -61,6 +61,8 @@ public class InstituteOnboardingRegistration_Test  extends TestBase{
 			return obj;
 			
 		}
+	
+
 	
 
 }
